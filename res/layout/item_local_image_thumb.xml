@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0000FF00"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp" >
+
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <!-- android:background="#33FFFFFF"
+        android:src="#FFFFFF"
+        android:clickable="false" -->
+    <ImageView 
+        android:id="@+id/view_mask"
+        android:background="#33FFFFFF" 
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_alignTop="@id/img_thumb" android:layout_alignBottom="@id/img_thumb"
+        android:layout_alignLeft="@id/img_thumb" android:layout_alignRight="@id/img_thumb"/>
+    <CheckBox 
+        android:id="@+id/check_img_choose"
+        android:checked="true"
+        android:clickable="false"
+        android:background="@drawable/selector_image_check"
+        android:gravity="right|bottom"
+        android:button="@null"
+        android:drawableRight="@null"
+        android:paddingRight="3dp" android:paddingLeft="0dp"
+        android:paddingBottom="3dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignRight="@id/img_thumb"
+        android:layout_alignBottom="@id/img_thumb"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        />
+    <!-- android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" -->
+</RelativeLayout>

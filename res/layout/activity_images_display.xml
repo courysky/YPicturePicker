@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp">
+
+<RelativeLayout
+        android:id="@+id/layout_top"
+        android:background="#FFFFFF"
+        android:layout_width="fill_parent" android:layout_height="48dp" >
+       
+       
+        <ImageButton 
+           android:id="@+id/btn_back"
+           android:background="@null"
+           android:scaleX="0.8"
+           android:scaleY="0.8"
+           android:src="@drawable/selector_back_btn"
+           android:layout_width="wrap_content" android:layout_height="wrap_content"
+           android:layout_centerVertical="true"/>
+        <ImageView
+           android:id="@+id/img_down_arrow"
+           android:visibility="visible"
+           android:src="@drawable/add_down_arrow_normal" 
+           
+           android:layout_width="wrap_content" android:layout_height="match_parent"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"/>
+        <TextView 
+           android:id="@+id/tlt_floder_name"
+           android:text="文件夹名"
+           android:textSize="20sp"
+           android:textColor="@color/txt_dark"
+           android:singleLine="true"
+           android:ellipsize="end"
+           android:gravity="center|left"
+           android:layout_width="140dp" android:layout_height="match_parent"
+           android:layout_toLeftOf="@id/img_down_arrow"
+           android:layout_centerVertical="true"/>
+        <Spinner 
+           android:id="@+id/spinner_local_floder"
+           android:visibility="invisible"
+           android:spinnerMode="dropdown"
+           android:gravity="right"
+           android:background="#ffffff"
+           android:layout_width="160dp" android:layout_height="wrap_content"
+           android:layout_toLeftOf="@id/img_down_arrow"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"/>
+        <View 
+            android:background="@color/view_title_line"
+           android:layout_width="fill_parent" android:layout_height="0.5dp"
+           android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/layout_menus"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button 
+            android:id="@+id/btn_cancel"
+            android:text="取消"
+            android:textColor="@color/grey"
+            android:background="@null"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <Button 
+            android:id="@+id/btn_next"
+            android:text="下一步"
+            android:textColor="@color/red_user"
+            android:background="@null"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/list_day_images"
+        android:background="@color/white"
+        android:divider="@null"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_above="@id/layout_menus"
+        android:layout_below="@id/layout_top">
+    </ListView>
+    <View 
+           android:background="@color/view_line"
+           android:layout_width="fill_parent" android:layout_height="0.5dp"
+           android:layout_above="@id/layout_menus"/>
+</RelativeLayout>

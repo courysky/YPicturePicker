@@ -1,0 +1,9 @@
+<resources>
+    
+    <color name="grey">#787878</color>
+    <color name="txt_dark">#000000 </color>
+    <color name="view_title_line">#adadad</color> 
+    <color name="red_user">#ea6a67</color><!--#c63b52 --> 
+    <color name="white">#ffffff</color>
+    <color name="view_line">#e5e3e3</color>
+</resources>
