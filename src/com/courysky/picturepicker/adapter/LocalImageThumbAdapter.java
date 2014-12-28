@@ -76,7 +76,7 @@ public class LocalImageThumbAdapter<T extends AbsListView> extends BaseAdapter{
 		inflater = LayoutInflater.from(mContext);
 		
 		asyncImageDisplayManager = new AsyncImageDisplayManager();
-		String cacheDir = mContext.getCacheDir().getAbsolutePath();
+		String cacheDir = mContext.getExternalCacheDir().getAbsolutePath();
 		asyncImageDisplayManager.setLocalCacheDir(cacheDir);
 		
 		thumbImgWidth = (UIUtil.getScreenWidth((Activity)mContext)-6)/4;
